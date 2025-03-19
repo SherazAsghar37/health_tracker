@@ -32,4 +32,25 @@ abstract class AppStrings {
 
   //home screen / body / slider
   static const String sliderTitle = 'Swip and Start';
+
+  //detials screen
+  static const String title = 'Your hearbear';
+  static const String filter = 'Today';
+  static const List<int> chartData = [70, 20, 90, 160, 80, 60];
+  static const List<String> chartPrimaryAxis = [
+    "09:00",
+    "12:00",
+    "03:00",
+    "06:00",
+    "09:00",
+    "12:00",
+  ];
+  static const exerciseTitle = 'Exercises for heart health';
+  static const List<String> exercises = [
+    'Asana "Dog fave down"',
+    'Push-ups',
+    'Leg lifts',
+    'Abs exercises',
+    'Squats',
+  ];
 }

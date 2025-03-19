@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:health_tracker/utils/app_strings.dart';
 import 'package:health_tracker/utils/colours.dart';
 import 'package:health_tracker/utils/constants.dart';
@@ -20,23 +21,46 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                AppText(
-                  text: AppStrings.appBarTitle,
-                  fontSize: AppSizes.fontSizeXXl,
-                  fontWeight: FontWeight.w600,
+                AnimationConfiguration.synchronized(
+                  child: SlideAnimation(
+                    curve: Curves.easeOut,
+                    duration: const Duration(milliseconds: 800),
+                    verticalOffset: 0.0,
+                    horizontalOffset: -120,
+                    child: AppText(
+                      text: AppStrings.appBarTitle,
+                      fontSize: AppSizes.fontSizeXXl,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
                 ),
                 SizedBox(height: AppSizes.xxs),
-                AppText(
-                  text: AppStrings.appBarSubtitle,
-                  fontSize: AppSizes.fontSizeMd,
-                  color: Colours.primaryTextColorLight,
-                  fontWeight: FontWeight.w500,
+                AnimationConfiguration.synchronized(
+                  child: SlideAnimation(
+                    curve: Curves.easeOut,
+                    duration: const Duration(milliseconds: 800),
+                    verticalOffset: 0.0,
+                    horizontalOffset: -150,
+                    child: AppText(
+                      text: AppStrings.appBarSubtitle,
+                      fontSize: AppSizes.fontSizeMd,
+                      color: Colours.primaryTextColorLight,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
                 ),
               ],
             ),
-            RoundedImage(
-              source: Constants.userImageUrl,
-              type: ImageSourceType.network,
+            AnimationConfiguration.synchronized(
+              child: ScaleAnimation(
+                curve: Curves.easeOut,
+                duration: const Duration(milliseconds: 800),
+                scale: 1.2,
+                child: RoundedImage(
+                  source: Constants.userImageUrl,
+                  type: ImageSourceType.network,
+                ),
+              ),
             ),
           ],
         ),

@@ -40,24 +40,24 @@ class _ShimmerArrowsState extends State<ShimmerArrows>
                 child: Icon(
                   Icons.arrow_forward_ios,
                   color: Colours.whiteColor,
-                  size: AppSizes.lg,
+                  size: AppSizes.mdLg,
                 ),
               ),
+              Align(
+                widthFactor: 1,
+                child: Icon(
+                  Icons.arrow_forward_ios,
+                  color: Colours.whiteColor,
+                  size: AppSizes.md,
+                ),
+              ),
+
               Align(
                 widthFactor: 0.7,
                 child: Icon(
                   Icons.arrow_forward_ios,
                   color: Colours.whiteColor,
-                  size: AppSizes.mdLg,
-                ),
-              ),
-
-              Align(
-                widthFactor: 0.5,
-                child: Icon(
-                  Icons.arrow_forward_ios,
-                  color: Colours.whiteColor,
-                  size: AppSizes.md,
+                  size: AppSizes.mdLg - AppSizes.sm,
                 ),
               ),
               SizedBox(width: AppSizes.lg),

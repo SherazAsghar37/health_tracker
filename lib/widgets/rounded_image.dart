@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:health_tracker/utils/colours.dart';
@@ -28,7 +29,12 @@ class RoundedImage extends StatelessWidget {
   Widget _buildImage() {
     switch (type) {
       case ImageSourceType.network:
-        return Image.network(source, width: width, height: width, fit: fit);
+        return CachedNetworkImage(
+          imageUrl: source,
+          width: width,
+          height: width,
+          fit: fit,
+        );
 
       case ImageSourceType.file:
         return Image.file(

@@ -23,4 +23,21 @@ abstract class Colours {
   //Cards
   static const Color cardColor = Color(0xFF2A2A2A);
   static const Color lightCardColor = Colors.black12;
+
+  // static const List<Color> detailsColor = [
+  //   Colours.primaryColorAccent1,
+  //   Colours.primaryColorAccent2,
+  //   Colours.primaryColorAccent3,
+  //   Colours.primaryColorAccent4,
+  //   Colours.primaryColorAccent5,
+  //   Colours.primaryColorAccent6,
+  // ];
+  static const List<Color> detailsColor = [
+    Colours.primaryColorAccent6,
+    Colours.primaryColorAccent5,
+    Colours.primaryColorAccent4,
+    Colours.primaryColorAccent3,
+    Colours.primaryColorAccent2,
+    Colours.primaryColorAccent1,
+  ];
 }

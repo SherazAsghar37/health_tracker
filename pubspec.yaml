@@ -35,6 +35,9 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   flutter_svg: ^2.0.17
+  flutter_staggered_animations: ^1.1.1
+  cached_network_image: ^3.4.1
+  animate_do: ^4.2.0
 
 dev_dependencies:
   flutter_test:

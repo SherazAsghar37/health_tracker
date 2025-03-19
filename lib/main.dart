@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:health_tracker/routes/routes_generator.dart';
 import 'package:health_tracker/screens/home/home_screen.dart';
+import 'package:health_tracker/utils/colours.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,8 +15,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Health Tracker',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colours.primaryColor),
       ),
+      onGenerateRoute: routesGenerator,
       home: const HomeScreen(),
     );
   }
